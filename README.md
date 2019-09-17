@@ -63,13 +63,15 @@ nof_movies (integer): not required
 Returns:
 Result string
 
+
 ## Getting a movie:
 
+```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"title": "%VALUE%"}'\
    http://localhost:7070/api.get_movie
-
+```
 Fields:
 title (string): not required
 
@@ -77,23 +79,26 @@ Returns:
 JSON-serializable string with movie data
 
 ## Getting a list of movie titles
+```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"nof_movies": "%VALUE%"}'\
    http://localhost:7070/api.get_movie_list
-   
+```   
 Fields:
 nof_movies (integer): not required
 
 Returns:
 List of strings i.e. movie titles
 
+
 ## Adding a movie
+```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"api_key": "%VALUE%", "title": "%VALUE%"}'\
    http://localhost:7070/api.add_movie
-   
+```   
 Fields:
 api_key (string): required
 title (string): required
@@ -101,12 +106,14 @@ title (string): required
 Returns:
 Result string indicating how the operattion went
 
+
 ## Deleting a movie
+```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"omdb_id": "%VALUE%"}'\
    http://localhost:7070/api.delete_movie
-   
+```   
 Fields:
 omdb_id (string): required
 
