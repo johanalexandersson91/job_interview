@@ -48,12 +48,12 @@ the command as stated here.
 
 
 ## Downloading movies
-
+```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"api_key": "%VALUE%", "omdb_start_id": "%VALUE%", "nof_movies": "%VALUE%"}'\
    http://localhost:7070/MovieFetcher.fetch
-   
+```   
 Fields:
 
 api_key (string): required
