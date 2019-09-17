@@ -54,14 +54,14 @@ curl -H \
    -d '{"api_key": "%VALUE%", "omdb_start_id": "%VALUE%", "nof_movies": "%VALUE%"}'\
    http://localhost:7070/MovieFetcher.fetch
 ```   
-Fields:
+Fields:  
 
-api_key (string): required
-omdb_start_id (string): not required
-nof_movies (integer): not required
+api_key (string): required  
+omdb_start_id (string): not required  
+nof_movies (integer): not required  
 
-Returns:
-Result string
+Returns:  
+Result string  
 
 
 ## Getting a movie:
@@ -72,53 +72,53 @@ curl -H \
    -d '{"title": "%VALUE%"}'\
    http://localhost:7070/api.get_movie
 ```
-Fields:
-title (string): not required
+Fields:  
+title (string): not required  
 
-Returns:
-JSON-serializable string with movie data
+Returns:  
+JSON-serializable string with movie data  
 
-## Getting a list of movie titles
+## Getting a list of movie titles  
 ```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"nof_movies": "%VALUE%"}'\
    http://localhost:7070/api.get_movie_list
 ```   
-Fields:
-nof_movies (integer): not required
+Fields:  
+nof_movies (integer): not required  
 
-Returns:
-List of strings i.e. movie titles
+Returns:  
+List of strings i.e. movie titles  
 
 
-## Adding a movie
+## Adding a movie  
 ```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"api_key": "%VALUE%", "title": "%VALUE%"}'\
    http://localhost:7070/api.add_movie
 ```   
-Fields:
-api_key (string): required
-title (string): required
+Fields:  
+api_key (string): required  
+title (string): required  
 
-Returns:
-Result string indicating how the operattion went
+Returns:  
+Result string indicating how the operattion went  
 
 
-## Deleting a movie
+## Deleting a movie  
 ```javascript
 curl -H \
    'content-type:application/json' \
    -d '{"omdb_id": "%VALUE%"}'\
    http://localhost:7070/api.delete_movie
 ```   
-Fields:
-omdb_id (string): required
+Fields:  
+omdb_id (string): required  
 
-Returns:
-Result string indicating how the operattion went
-
+Returns:  
+Result string indicating how the operattion went  
+  
 NOTE: There is no user authentication going on here. I did not have time to dig into all of that.
    
