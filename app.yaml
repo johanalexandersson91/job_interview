@@ -1,0 +1,20 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /MovieFetcher.*
+  script: backend.MovieFetcher.app
+
+- url: /api.*
+  script: backend.api.api.app
+  secure: always
+
+- url: /_ah/warmup
+  script: backend.api.warmup
+  login: admin
+  
+
+inbound_services:
+- warmup
